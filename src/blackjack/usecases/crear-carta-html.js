@@ -7,7 +7,7 @@
 
 
 
-export const crearCartaHtml = (carta) =>{
+export const CrearCartaHtml = (carta) =>{
 
     if(!carta) throw new Error('La carta es un argumento obligatorio');
 
