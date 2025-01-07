@@ -1,6 +1,6 @@
 import _ from 'underscore';
 
-import { crearDeck,pedirCarta,valorCarta,turnoComputadora,crearCartaHtml } from './usecases';
+import { crearDeck,pedirCarta,valorCarta,turnoComputadora,CrearCartaHtml } from './usecases';
 /**
  * 2C = Two of Clubs
  * 2D = Two of Diamonds
@@ -46,10 +46,10 @@ btnPedir.addEventListener('click', () => {
     puntosHTML[0].innerText = puntosJugador;
     
     // <img class="carta" src="assets/cartas/2C.png">
-    const imgCarta = crearCartaHtml(carta);
+    const imgCarta = CrearCartaHtml(carta);
     divCartasJugador.append( imgCarta );
 
-    if ( puntosJugador > 21 ) {
+    if ( puntosJugador > 21 ) { 
         console.warn('Lo siento mucho, perdiste');
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
